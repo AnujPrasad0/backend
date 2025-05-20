@@ -6,6 +6,9 @@ import random
 import util  # Assumes util provides get_angle() and get_distance()
 from pynput.mouse import Button, Controller
 
+print("Virtual Mouse Script is Running...")
+
+
 # For volume control using pycaw
 from ctypes import POINTER, cast
 from comtypes import CLSCTX_ALL
