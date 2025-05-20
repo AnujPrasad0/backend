@@ -10,12 +10,13 @@ def run_script():
     global process
     if process is None:
         try:
-            process = subprocess.Popen(["python3", "backend/main.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            process = subprocess.Popen(["python3", "main.py"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             return {"message": "Python script started!"}, 200
         except Exception as e:
             return {"error": str(e)}, 500
     else:
         return {"message": "Script already running!"}, 400
+
 
 
 @app.route('/stop-script')
